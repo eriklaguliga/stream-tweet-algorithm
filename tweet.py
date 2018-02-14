@@ -6,10 +6,10 @@ import csv
 import json
 
 
-ckey = "lh4BVF4dluBnviQ3uMKY7uu2O"
-csecret = "FXZX1atG6rpuCHn4h0LyAtH9MwQIre1NsmYYEc1xAovSOKlWhZ"
-atoken = "62031992-fHdAZwWIFXXPEZwgYOHk0hcJiXM7I8GhNWgYZbFLt"
-asecret = "mjX3gFex3KxjJgCrvtsfB9xozhnU8tJ4qJswlN0v0VAwQ"
+ckey = "xxxx"
+csecret = "xxxx"
+atoken = "xxxx"
+asecret = "xxxx"
 
 
 class listener(StreamListener):
