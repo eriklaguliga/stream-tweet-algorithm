@@ -11,7 +11,7 @@ csecret = "FXZX1atG6rpuCHn4h0LyAtH9MwQIre1NsmYYEc1xAovSOKlWhZ"
 atoken = "62031992-fHdAZwWIFXXPEZwgYOHk0hcJiXM7I8GhNWgYZbFLt"
 asecret = "mjX3gFex3KxjJgCrvtsfB9xozhnU8tJ4qJswlN0v0VAwQ"
 
-handle = open("history.txt","w")
+
 class listener(StreamListener):
 
     def on_data(self, data):
