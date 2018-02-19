@@ -4,6 +4,9 @@ from tweepy.streaming import StreamListener
 import time
 import csv
 import json
+import django
+import nltk
+
 
 
 ckey = "xxxx"
@@ -11,16 +14,22 @@ csecret = "xxxx"
 atoken = "xxxx"
 asecret = "xxxx"
 
-
+#a=[]
+handle = open("history.txt","w")
 class listener(StreamListener):
 
     def on_data(self, data):
-        # print(data)
-        print(data)
-        # all =  json.loads(data)
+        #print(data)
+        all =  json.loads(data)
         # print(all)
-        # tweet = all['text']
-        # print(tweet)
+        tweet = all['text']
+        toke = nltk.word_tokenize(tweet)
+        print(toke)
+        #a.append(toke)
+        #print(a)
+        #a.append(tweet)
+        # print(a)
+        #print(tweet)
         # print(data)
         return(True)
 
@@ -45,6 +54,7 @@ auth = OAuthHandler(ckey, csecret)
 auth.set_access_token(atoken, asecret)
 runtime = 10
 twitterStream = Stream(auth, listener())
-twitterStream.sample()
+twitterStream.filter(track=['indonesia'])
 time.sleep(runtime)
 twitterStream.disconnect()
+
